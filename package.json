@@ -11,14 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/amyhre16/HotRestaurant.git"
   },
-  "author": "",
+  "author": "Anthony Myhre",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/amyhre16/HotRestaurant/issues"
   },
   "homepage": "https://github.com/amyhre16/HotRestaurant#readme",
   "dependencies": {
-    "body-parser": "^1.16.0",
+    "body-parser": "^1.16.1",
     "express": "^4.14.1",
     "mysql": "^2.13.0",
     "path": "^0.12.7"
