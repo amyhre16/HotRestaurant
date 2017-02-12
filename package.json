@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlexSlayton/HotRestaurant.git"
+    "url": "git+https://github.com/amyhre16/HotRestaurant.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AlexSlayton/HotRestaurant/issues"
+    "url": "https://github.com/amyhre16/HotRestaurant/issues"
   },
-  "homepage": "https://github.com/AlexSlayton/HotRestaurant#readme",
+  "homepage": "https://github.com/amyhre16/HotRestaurant#readme",
   "dependencies": {
     "body-parser": "^1.16.0",
     "express": "^4.14.1",
