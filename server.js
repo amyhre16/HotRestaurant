@@ -6,7 +6,6 @@ var mysql = require('mysql');
 
 // create the express server and assign the port
 var app = express();
-var PORT = 3000;
 
 // sets up the express app to handle data parsing
 app.use(bodyParser.json());
@@ -105,6 +104,6 @@ app.post('/makeReservation', function(req, res) {
 
 
 // starts server to begin listening
-app.listen(PORT, function() {
-	console.log("App listening on PORT " + PORT);
+app.listen(process.env.PORT || 5000, function() {
+	console.log("Server is listening");
 });
