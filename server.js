@@ -7,19 +7,33 @@ var mysql = require('mysql');
 // create the express server and assign the port
 var app = express();
 
+/*
+	if process.env.PORT is set, use that as PORT
+	otherwise, use 5000 as the port
+*/
+var PORT = process.env.PORT || 5000;
+
+app.use(express.static(__dirname + "/app/public"));
+
 // sets up the express app to handle data parsing
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 
-// create the connection to the SQL server
-var connection = mysql.createConnection({
+var connectionInfo = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
-	password: 'secret',
+	password: 'null',
 	database: 'hotRestaurant'
 });
+
+if (process.env.JAWSDB_URL) {
+	connectionInfo = process.env.JAWSDB_URL;
+}
+
+// create the connection to the SQL server
+var connection = mysql.createConnection(connectionInfo);
 
 // connect to the server
 connection.connect();
@@ -38,11 +52,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/reserve', function(req, res) {
-	res.sendFile(path.join(__dirname, "reserve.html"));
+	res.sendFile(path.join(__dirname, "/app/public/reserve.html"));
 });
 
 app.get('/tables', function(req, res) {
-	res.sendFile(path.join(__dirname, "tables.html"));
+	res.sendFile(path.join(__dirname, "/app/public/tables.html"));
 });
 
 // when /api/tables is visited, display the tables array
