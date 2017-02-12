@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amy's Pizza</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" style="text-align: center;">
+            <h1>Amy's Pizza</h1>
+            <h3>The greatest pizza a guy with a girl name can make!</h3>
+            <hr>
+            <a href="/tables"><button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
+            <a href="/"><button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-home"></span></button></a>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Table Reservations</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <form method="POST" role="form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div> <!-- end of .class-group -->
+
+                            <div class="form-group">
+                                <label for="number">Phone Number</label>
+                                <input type="text" class="form-control" id="number">
+                            </div> <!-- end of .class-group -->
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" id="email">
+                            </div> <!-- end of .class-group -->
+
+                            <div class="form-group">
+                                <label for="unique-id">Unique ID</label>
+                                <input type="text" class="form-control" id="unique">
+                            </div> <!-- end of .class-group -->
+                        </form> <!-- end of form -->
+                        <br>
+                        <div class="text-left">
+                            <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="glyphicon glyphicon-fire"></span>Submit</button>
+                        </div> <!-- end of .text-left -->
+                    </div> <!-- .panel-body -->
+                </div> <!-- end of .panel .panel-default -->
+            </div> <!-- end of .col-lg-12 -->
+        </div> <!-- end of .row -->
+  
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitingList">API Waitlist</a></p>
+            </div> <!-- end of .container -->
+        </footer> <!-- end of .footer -->
+    </div> <!-- end of .container -->
+
+    <div id="reservationModal" class="modal fade" role="dialog" style="text-align: center;">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>Congrats!</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="reservationMessage">Your reservation has been made!</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="waitingListModal" class="modal fade" role="dialog" style="text-align: center;">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>I'm sorry!</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="waitingListMessage">Please fill out all required fields!</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
