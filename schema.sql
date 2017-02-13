@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS tables (
 	, name VARCHAR(100) NOT NULL
 	, phone_number VARCHAR(100)
 	, email VARCHAR(100)
-	, unique_id VARCHAR(100) NOT NULL
+	, unique_id VARCHAR(100) NOT NULL UNIQUE
 	, PRIMARY KEY(reservation_id)
 );
 
@@ -19,6 +19,6 @@ CREATE TABLE IF NOT EXISTS waitingList (
 	, name VARCHAR(100) NOT NULL
 	, phone_number VARCHAR(100)
 	, email VARCHAR(100)
-	, unique_id VARCHAR(100) NOT NULL
+	, unique_id VARCHAR(100) NOT NULL UNIQUE
 	, PRIMARY KEY(waitingList_id)
 );
