@@ -24,7 +24,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 var connectionInfo = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
-	password: 'null',
+	password: '',
 	database: 'hotRestaurant'
 });
 

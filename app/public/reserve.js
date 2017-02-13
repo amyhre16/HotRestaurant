@@ -21,7 +21,7 @@ $(document).ready(function() {
             send the table object
             when the request is finished, run the callback function
         */
-        $.post(currentURL + "/makeReservation", table, function(data) {
+        $.post(currentURL + "/../../makeReservation", table, function(data) {
             // if data has the reservation property, then let the user know that they've gotten a table
             if(data.reservation != undefined){
                 // alert("you got a table");
