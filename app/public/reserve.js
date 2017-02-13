@@ -1,5 +1,6 @@
 // run callback function when page is finished loading
 $(document).ready(function() {
+    alert("Hello world");
     /*
         event listener that waits for the element with id add-btn to be clicked
         when it's clicked, run the callback function
