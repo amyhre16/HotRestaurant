@@ -13,6 +13,9 @@ $(document).ready(function() {
             unique: $("#unique").val().trim()
         };
 
+        for (var property in table) {
+            console.log(property);
+        }
         // grab the domain from the url
         var currentURL = window.location.origin;
 
