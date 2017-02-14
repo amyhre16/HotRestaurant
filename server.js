@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 
-var connectionInfo = mysql.createConnection({
+/*var connectionInfo = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
 	password: '',
@@ -36,15 +36,7 @@ if (process.env.JAWSDB_URL) {
 var connection = mysql.createConnection(connectionInfo);
 
 // connect to the server
-connection.connect();
-
-var tables = [
-	
-];
-
-var waitingList = [
-
-];
+connection.connect();*/
 
 // when this route is visited, send the browser to HotRestaurant/index.html
 app.get('/', function(req, res) {
